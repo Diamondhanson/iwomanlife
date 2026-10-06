@@ -9,8 +9,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { EVENT_DATE_ISO } from "@/components/conference-4/conference-4-meta";
-import { CountdownTimer } from "@/components/conference-4/countdown-timer";
 
 /**
  * Hero tint: image brightness, then a single purple vertical gradient overlay
@@ -24,20 +22,20 @@ const HERO_PURPLE_GRADIENT =
 
 const HERO_SLIDES = [
   {
-    src: "/images/hero/dsc-7765.jpg",
-    alt: "Panel discussion at the iWOMAN Intentional Conference",
+    src: "/images/hero/2026-crowd-celebration.jpg",
+    alt: "Women celebrating together at the 2026 Intentional Woman Conference",
   },
   {
-    src: "/images/hero/dsc-7634.jpg",
-    alt: "Audience gathered for the iWOMAN Arise and Shine conference",
+    src: "/images/hero/2026-panel.jpg",
+    alt: "Panel discussion at the 2026 Intentional Woman Conference, The Audacity to Win",
   },
   {
-    src: "/images/hero/dsc-7615.jpg",
-    alt: "Community of women on stage at an iWOMAN event",
+    src: "/images/hero/2026-cheering.jpg",
+    alt: "A delegate cheering in the audience at the 2026 Intentional Woman Conference",
   },
   {
-    src: "/images/hero/iw-dsc-7817.jpg",
-    alt: "Speaker on stage at the Intentional Woman conference",
+    src: "/images/hero/2026-ovation.jpg",
+    alt: "Standing ovation for the keynote at the 2026 Intentional Woman Conference",
   },
 ] as const;
 
@@ -162,39 +160,6 @@ export function PortalHero() {
           initial="hidden"
           animate="show"
         >
-          {/* 0. Conference 4 announcement pill + countdown */}
-          <motion.div
-            variants={itemShow}
-            className="flex flex-col items-center gap-4"
-          >
-            <Link
-              href="/conference-4#sponsor-access"
-              className="font-accent group inline-flex max-w-[18rem] items-start gap-2 rounded-2xl border border-iw-gold/60 bg-iw-purple/45 px-4 py-2 text-center text-[10px] font-bold uppercase leading-snug tracking-[0.22em] text-iw-gold no-underline shadow-[0_4px_20px_rgb(0_0_0/0.35)] backdrop-blur-md transition-[background-color,border-color] hover:border-iw-gold hover:bg-iw-purple/65 sm:max-w-none sm:items-center sm:rounded-full sm:text-xs sm:leading-none"
-            >
-              <span
-                className="mt-[3px] size-1.5 shrink-0 animate-pulse rounded-full bg-iw-gold sm:mt-0"
-                aria-hidden
-              />
-              <span>
-                4th Edition · Intentional Woman Conference · 22 Aug 2026 ·
-                Sponsor a woman
-                <span className="hidden sm:inline"> →</span>
-              </span>
-            </Link>
-            <Link
-              href="/conference-4"
-              aria-label="View conference details and sponsor a woman"
-              className="no-underline"
-            >
-              <CountdownTimer
-                targetIso={EVENT_DATE_ISO}
-                variant="compact"
-                tone="dark"
-                className="rounded-full border border-iw-white/15 bg-iw-purple/30 px-4 py-2 backdrop-blur-md transition-colors hover:border-iw-gold/50"
-              />
-            </Link>
-          </motion.div>
-
           {/* 1. Primary headline — two block lines so each centers cleanly (avoids tracking/balance skew) */}
           <motion.h1
             variants={itemShow}
@@ -221,14 +186,6 @@ export function PortalHero() {
             variants={itemShow}
             className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:justify-center sm:gap-5"
           >
-            <a
-              href="https://iwoman.kwiknkap.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-accent inline-flex min-h-12 items-center justify-center rounded-sm bg-iw-gold px-8 text-sm font-bold uppercase tracking-widest text-iw-purple no-underline transition-[transform,box-shadow] hover:shadow-lg hover:shadow-iw-gold/35 active:scale-[0.98]"
-            >
-              Register for the conference
-            </a>
             <Link
               href="/model"
               className="font-accent inline-flex min-h-12 items-center justify-center rounded-sm border-2 border-white/95 bg-black/30 px-8 text-sm font-bold uppercase tracking-widest text-iw-white shadow-[0_4px_24px_rgb(0_0_0/0.4)] backdrop-blur-[8px] transition-[background-color] hover:bg-black/45"

@@ -1,6 +1,6 @@
 /**
- * Programme timeline: 1st & 3rd edition use local galleries (`edition-galleries.ts`);
- * 2nd & upcoming use Unsplash (`next.config` remotePatterns).
+ * Programme timeline: 1st, 3rd & 4th edition use local galleries (`edition-galleries.ts`);
+ * 2nd uses Unsplash (`next.config` remotePatterns).
  */
 
 import type { StaticImageData } from "next/image";
@@ -9,6 +9,7 @@ import {
   FIRST_EDITION_GALLERY,
   SECOND_EDITION_GALLERY,
   THIRD_EDITION_GALLERY,
+  FOURTH_EDITION_GALLERY,
 } from "./edition-galleries";
 
 import walk1 from "@/assets/power walk/walk-1.jpeg";
@@ -33,7 +34,7 @@ export type ConferenceChapterTheme =
   | "foundation"
   | "awakening"
   | "zenith"
-  | "upcoming";
+  | "victory";
 
 export const TIMELINE = {
   y2023: {
@@ -52,6 +53,14 @@ export const TIMELINE = {
     gallery: SECOND_EDITION_GALLERY,
     theme: "awakening" as const,
   },
+  y2026: {
+    year: "2026",
+    name: "The Audacity to Win",
+    epithet: "Fourth edition",
+    body: "Identity, growth and leadership took centre stage as women were challenged to compete, build and finish strong without shrinking their values. Keynotes, panels and candid conversations turned ambition into practice, and the room left with the nerve to claim the win.",
+    gallery: FOURTH_EDITION_GALLERY,
+    theme: "victory" as const,
+  },
   y2025: {
     year: "2025",
     name: "Arise and Shine",
@@ -59,16 +68,6 @@ export const TIMELINE = {
     body: "We turned up the lights on visibility and voice—keynotes and breakouts on stepping forward with clarity, leadership in public and private life, and carrying purpose into rooms where decisions are made, so rising wasn’t a slogan but a shared practice.",
     gallery: THIRD_EDITION_GALLERY,
     theme: "zenith" as const,
-  },
-  upcoming: {
-    year: "Next",
-    name: "The Audacity to Win",
-    epithet: "Fourth edition · Coming soon",
-    body: "The next gathering will sharpen ambition with integrity—what it takes to compete, build, and finish strong without shrinking your values. Programme details, dates, and registration will be announced; join the list through our usual channels so you don’t miss the opening.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-    imageAlt: "Sunrise over hills—forward-looking, hopeful horizon",
-    theme: "upcoming" as const,
   },
 } as const;
 

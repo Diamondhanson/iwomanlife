@@ -22,6 +22,14 @@ import t7604 from "@/assets/3rd edition/DSC 7604.jpg";
 import t7613 from "@/assets/3rd edition/DSC 7613.jpg";
 import t7765 from "@/assets/3rd edition/DSC 7765 from iwoman.jpg";
 
+import f2026Seated from "@/assets/4th edition/speakers-seated.jpg";
+import f2026Keynote from "@/assets/4th edition/keynote.jpg";
+import f2026Audience from "@/assets/4th edition/audience.jpg";
+import f2026Laughter from "@/assets/4th edition/laughter.jpg";
+import f2026Awardees from "@/assets/4th edition/awardees.jpg";
+import f2026Portrait from "@/assets/4th edition/portrait.jpg";
+import f2026Host from "@/assets/4th edition/host.jpg";
+
 export type EditionGallerySlide = {
   src: StaticImageData;
   alt: string;
@@ -112,5 +120,37 @@ export const THIRD_EDITION_GALLERY: readonly EditionGallerySlide[] = [
   {
     src: t7765,
     alt: "Intentional Woman Conference 2025 — celebration",
+  },
+];
+
+/** Intentional Woman Conference — 4th edition (2026), “The Audacity to Win” */
+export const FOURTH_EDITION_GALLERY: readonly EditionGallerySlide[] = [
+  {
+    src: f2026Seated,
+    alt: "Intentional Woman Conference 2026 — speakers and panelists seated together",
+  },
+  {
+    src: f2026Keynote,
+    alt: "Intentional Woman Conference 2026 — keynote under The Audacity to Win banner",
+  },
+  {
+    src: f2026Audience,
+    alt: "Intentional Woman Conference 2026 — full room of attendees",
+  },
+  {
+    src: f2026Laughter,
+    alt: "Intentional Woman Conference 2026 — attendees laughing during a session",
+  },
+  {
+    src: f2026Awardees,
+    alt: "Intentional Woman Conference 2026 — women on stage with gift bags",
+  },
+  {
+    src: f2026Portrait,
+    alt: "Intentional Woman Conference 2026 — a delegate smiling at her table",
+  },
+  {
+    src: f2026Host,
+    alt: "Intentional Woman Conference 2026 — speaker addressing the room",
   },
 ];

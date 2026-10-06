@@ -143,32 +143,28 @@ export function ImpactYearChapter({
   const inView = useInView(ref, { once: true, margin: "-10% 0px" });
 
   const cardShell =
-    theme === "zenith"
+    theme === "zenith" || theme === "victory"
       ? "border-iw-gold/40 shadow-[0_24px_48px_-12px_rgba(75,36,106,0.35)]"
       : theme === "awakening"
         ? "border-iw-purple/20 shadow-[0_20px_40px_-16px_rgba(75,36,106,0.12)]"
-        : theme === "upcoming"
-          ? "border-2 border-dashed border-iw-gold/50 shadow-[0_20px_40px_-16px_rgba(75,36,106,0.1)]"
-          : "border-iw-purple/30 shadow-[0_16px_32px_-12px_rgba(0,0,0,0.12)]";
+        : "border-iw-purple/30 shadow-[0_16px_32px_-12px_rgba(0,0,0,0.12)]";
 
   const textPanelClass =
-    theme === "zenith"
+    theme === "zenith" || theme === "victory"
       ? "bg-iw-purple text-iw-white"
       : theme === "awakening"
         ? "border-t border-iw-purple/10 bg-iw-white/95 text-iw-purple lg:border-l lg:border-t-0"
-        : theme === "upcoming"
-          ? "bg-linear-to-br from-iw-mist via-iw-white to-iw-mist text-iw-purple"
-          : "bg-iw-parchment text-iw-purple";
+        : "bg-iw-parchment text-iw-purple";
 
   const imageOnRight = theme === "zenith";
   const imageColOrder = imageOnRight ? "lg:order-2" : "lg:order-1";
   const textColOrder = imageOnRight ? "lg:order-1" : "lg:order-2";
 
-  const headingClass = theme === "zenith" ? "text-white" : "text-iw-purple";
-  const bodyClass = theme === "zenith" ? "text-white/88" : "text-iw-purple/88";
+  const darkPanel = theme === "zenith" || theme === "victory";
+  const headingClass = darkPanel ? "text-white" : "text-iw-purple";
+  const bodyClass = darkPanel ? "text-white/88" : "text-iw-purple/88";
 
-  const chapterLabel =
-    theme === "upcoming" ? "Next chapter" : `Conference · ${year}`;
+  const chapterLabel = `Conference · ${year}`;
 
   return (
     <motion.section

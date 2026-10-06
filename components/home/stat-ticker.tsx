@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const LINE =
-  "1,200+ WOMEN REACHED // 150+ MENTORED // 3 MAJOR CONFERENCES.";
+  "1,200+ WOMEN REACHED // 150+ MENTORED // 4 MAJOR CONFERENCES.";
 
 export function StatTicker() {
   return (
